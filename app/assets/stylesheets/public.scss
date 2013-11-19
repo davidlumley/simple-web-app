@@ -51,6 +51,7 @@ form ol {
   }
 
   input[type='email'], input[type='text'] {
+    color:         $white;
     border:        none;
     background:    none;
     border-bottom: 1px dotted lighten($black, 20);
