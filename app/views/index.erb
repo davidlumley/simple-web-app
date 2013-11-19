@@ -1,12 +1,12 @@
 <div class='row'>
   <% if @current_product %>
-  <div class='four columns offset by-two'>
+  <div class='four columns'>
     <h1><%= @current_product.name %></h1>
-    <p class='quantity'><em><%= @current_product.quantity %></em> Left</p>
-    <p class='price'><em>$<%= @current_product.total.to_s('f')%></em></p>
+    <p class='quantity'><em><%= @current_product.quantity %></em> left</p>
+    <p class='price'><em>$<%= @current_product.total.to_s('f')%></em> each</p>
     <%= erb :_purchase, :layout => false, :locals => {:error => params[:error]} %>
   </div>
-  <div class='four columns center'>
+  <div class='six columns offset by-two center'>
     <% if @current_product.image %>
     <image src='/images/<%= @current_product.image %>' width='200' height='200' class='image'>
     <% end %>

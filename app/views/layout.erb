@@ -7,7 +7,15 @@
     <% end %>
   </head>
   <body>
+    <header class='row'>
+      <h1 class='twelve columns left'>Simple Web App</h1>
+    </header>
     <%= yield %>
+    <footer class='row'>
+      <div class='twelve columns right'>
+        <p>generic_support_email@domain.com</p>
+      </div>
+    </footer>
     <script src='/assets/jquery.js'></script>
     <script src='/assets/stripe.js'></script>
     <script src='/assets/application.js'></script>
