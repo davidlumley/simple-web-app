@@ -1,7 +1,19 @@
-<% if @current_product %>
-<h1><%= @current_product.name %></h1>
-<h2><%= @current_product.quantity %> Left for $<%= @current_product.total.to_s('f')%> Each</h2>
-<%= erb :'modals/purchase', :layout => false %>
-<% else %>
-<h1>Sold Out!</h1>
-<% end %>
+<div class='row'>
+  <% if @current_product %>
+  <div class='four columns offset by-two'>
+    <h1><%= @current_product.name %></h1>
+    <p class='quantity'><em><%= @current_product.quantity %></em> Left</p>
+    <p class='price'><em>$<%= @current_product.total.to_s('f')%></em></p>
+    <%= erb :_purchase, :layout => false %>
+  </div>
+  <div class='four columns center'>
+    <% if @current_product.image %>
+    <image src='/images/<%= @current_product.image %>' width='200' height='200' class='image'>
+    <% end %>
+  </div>
+  <% else %>
+  <div class='eight columns offset by-two center'>
+    <h1>Sold Out!</h1>
+  </div>
+  <% end %>
+</div>

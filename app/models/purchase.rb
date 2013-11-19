@@ -6,7 +6,7 @@ module SinatraApp
     property :created_at, DateTime
     property :updated_at, DateTime
 
-    property :quantity,   Integer, :required => true
+    property :quantity,   Integer, :required => true, :default => 1
 
     belongs_to :product
     belongs_to :user

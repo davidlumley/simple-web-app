@@ -9,6 +9,7 @@ module SinatraApp
     property :name,       String,  :required => true
     property :total,      Decimal, :precision => 10, :scale => 2
     property :quantity,   Integer, :required => true, :default => 50
+    property :image,      String
 
     def self.current
       self.first(:quantity.gt => 0)
