@@ -14,6 +14,9 @@ gem 'dm-timestamps'
 gem 'dm-validations'
 gem 'dm-types'
 
+### Billing
+gem 'stripe'
+
 ### Communication
 gem 'pony'
 
