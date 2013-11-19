@@ -1,2 +1,7 @@
-<h1>Sinatra Example</h1>
-<p>Hello World</p>
+<% if @current_product %>
+<h1><%= @current_product.name %></h1>
+<h2><%= @current_product.quantity %> Left for $<%= @current_product.total.to_s('f')%> Each</h2>
+<%= erb :'modals/purchase', :layout => false %>
+<% else %>
+<h1>Sold Out!</h1>
+<% end %>
