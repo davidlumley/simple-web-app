@@ -1,0 +1,39 @@
+.button {
+  display:          block;
+  text-decoration:  none;
+  border:           1px solid $highlight;
+  background-color: $highlight;
+  margin:           0;
+  padding:          $margin $margin * 2;
+  color:            $white;
+  font-weight:      200;
+  font-size:        1.2em;
+  border-radius:    2px;
+}
+
+form ol {
+  margin:     0;
+  padding:    0;
+  list-style: none;
+  li {
+    margin: $margin 0;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+input[type='email'] {
+  border:        none;
+  background:    none;
+  border-bottom: 1px dotted lighten($black, 20);
+  width:         100%;
+}
+select {
+  width: 100%;
+}
+
+.image {
+  margin-top: 4em;
+}
