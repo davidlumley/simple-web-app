@@ -1,6 +1,11 @@
-<form method='post' action='/purchase'>
+<form method='post' action='/purchase' id='purchase' autocomplete='on'>
+  <input type='hidden' name='stripe_token'>
   <ol>
-    <li><input type='email' name='email' placeholder='email@domain.com'></li>
+    <li><input type='email' name='email' placeholder='email@domain.com' required></li>
+    <li><input type='text' name='credit_card_number' placeholder='Card Number: XXXX XXXX XXXX 1111' required></li>
+    <li><input type='text' name='credit_card_cvc' placeholder='CVC: 123' required></li>
+    <li><input type='text' name='credit_card_expiry' placeholder='Expiry: MM/YY' required></li>
+    <li><p id='error'><% if error %><%= error %><% end %></p></li>
     <li><input type='submit' value='Purchase' class='button'></li>
   </ol>
 </form>

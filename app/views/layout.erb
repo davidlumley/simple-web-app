@@ -2,9 +2,14 @@
   <head>
     <title>SimpleWebApp</title>
     <link rel='stylesheet' type='text/css' href='/assets/application.css'>
+    <% if ENV['STRIPE_PUBLIC_KEY'] %>
+      <meta name='stripe-key' content='<%= ENV['STRIPE_PUBLIC_KEY'] %>'>
+    <% end %>
   </head>
   <body>
     <%= yield %>
+    <script src='/assets/jquery.js'></script>
+    <script src='/assets/stripe.js'></script>
     <script src='/assets/application.js'></script>
   </body>
 </html>

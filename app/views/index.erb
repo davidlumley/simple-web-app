@@ -4,7 +4,7 @@
     <h1><%= @current_product.name %></h1>
     <p class='quantity'><em><%= @current_product.quantity %></em> Left</p>
     <p class='price'><em>$<%= @current_product.total.to_s('f')%></em></p>
-    <%= erb :_purchase, :layout => false %>
+    <%= erb :_purchase, :layout => false, :locals => {:error => params[:error]} %>
   </div>
   <div class='four columns center'>
     <% if @current_product.image %>
