@@ -24,7 +24,7 @@ form ol {
   text-align: center;
 }
 
-input[type='email'] {
+input[type='email'], input[type='text'] {
   border:        none;
   background:    none;
   border-bottom: 1px dotted lighten($black, 20);
