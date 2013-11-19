@@ -19,8 +19,20 @@ module SinatraApp
 
         purchase          = user.purchases.new
         purchase.product  = @current_product
-        purchase.save
+        if purchase.save
+          redirect '/success'
+        else
+          redirect '/failure'
+        end
       end
+    end
+
+    get '/success' do
+      erb :success
+    end
+
+    get '/failure' do
+      erb :failure
     end
 
   end
